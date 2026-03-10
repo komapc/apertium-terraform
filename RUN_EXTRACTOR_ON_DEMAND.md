@@ -84,7 +84,7 @@ This guide covers running the extractor on a temporary EC2 instance that:
 
 ```bash
 # Results copied to:
-~/apertium-dev/extractor-results/YYYY-MM-DD-HHMMSS/
+~/apertium-gemini/extractor-results/YYYY-MM-DD-HHMMSS/
 ```
 
 **Pros:**

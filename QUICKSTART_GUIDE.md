@@ -71,7 +71,7 @@ bash scripts/download_dumps.sh
 
 ```bash
 # From your local machine
-cd ~/apertium-dev/terraform
+cd ~/apertium-gemini/terraform
 ./run_extractor.sh
 ```
 
@@ -87,7 +87,7 @@ While extraction is running:
 
 ```bash
 # In another terminal
-cd ~/apertium-dev/terraform
+cd ~/apertium-gemini/terraform
 ./monitor_extractor.sh
 ```
 
@@ -107,7 +107,7 @@ ls -lh terraform/extractor-results/$(ls -t terraform/extractor-results/ | head -
 
 ```bash
 # 1. Navigate to terraform directory
-cd ~/apertium-dev/terraform
+cd ~/apertium-gemini/terraform
 
 # 2. Run extractor (this takes 1-2 hours)
 ./run_extractor.sh
@@ -149,7 +149,7 @@ df -h
 
 ### Clean up old files
 ```bash
-cd ~/apertium-dev/projects/dev-scripts
+cd ~/apertium-gemini/projects/dev-scripts
 ./cleanup_ec2_extractor.sh
 ```
 
@@ -165,9 +165,9 @@ Extractor:   ~/ido-esperanto-extractor/   (Safe to delete)
 
 ### On Local Machine
 ```
-Scripts:     ~/apertium-dev/terraform/
-Results:     ~/apertium-dev/terraform/extractor-results/
-Logs:        ~/apertium-dev/terraform/extractor-run-*.log
+Scripts:     ~/apertium-gemini/terraform/
+Results:     ~/apertium-gemini/terraform/extractor-results/
+Logs:        ~/apertium-gemini/terraform/extractor-run-*.log
 ```
 
 ---

@@ -4,7 +4,7 @@
 echo "=== Updating repository references ==="
 echo ""
 
-cd ~/apertium-dev/terraform
+cd ~/apertium-gemini/terraform
 
 # Update references in markdown files
 echo "Updating *.md files..."

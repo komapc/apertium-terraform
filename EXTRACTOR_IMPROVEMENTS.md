@@ -52,7 +52,7 @@ done
 
 ### Basic Usage
 ```bash
-cd ~/apertium-dev/terraform
+cd ~/apertium-gemini/terraform
 ./run_extractor_improved.sh
 ```
 
@@ -137,7 +137,7 @@ tail -100 /tmp/extraction.log | grep -q 'Error\|Failed'
 
 ### Option 1: Replace Original
 ```bash
-cd ~/apertium-dev/terraform
+cd ~/apertium-gemini/terraform
 mv run_extractor.sh run_extractor_old.sh
 mv run_extractor_improved.sh run_extractor.sh
 ```

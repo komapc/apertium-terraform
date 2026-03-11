@@ -49,7 +49,7 @@ git push -u origin master
 ```bash
 cd projects/extractor
 mkdir -p infra
-cp -r /home/mark/apertium-dev/terraform/* infra/
+cp -r /home/mark/apertium-gemini/terraform/* infra/
 cd infra
 git init
 git add -A
@@ -110,7 +110,7 @@ gh repo create apertium-terraform --public --description "Infrastructure as Code
 ### 2. Push Code
 
 ```bash
-cd /home/mark/apertium-dev/terraform
+cd /home/mark/apertium-gemini/terraform
 
 # Add remote
 git remote add origin https://github.com/komapc/apertium-terraform.git

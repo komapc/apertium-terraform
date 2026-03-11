@@ -13,7 +13,7 @@ No manual setup needed! Just run the extractor.
 ## 3️⃣ Run Extractor
 
 ```bash
-cd ~/apertium-dev/terraform
+cd ~/apertium-gemini/terraform
 ./run_extractor.sh
 ```
 
@@ -24,7 +24,7 @@ cd ~/apertium-dev/terraform
 ## Monitor Progress (Optional)
 
 ```bash
-cd ~/apertium-dev/terraform
+cd ~/apertium-gemini/terraform
 ./monitor_extractor.sh
 ```
 
@@ -41,7 +41,7 @@ ls -lh terraform/extractor-results/*/
 ## Deploy to GitHub
 
 ```bash
-cd ~/apertium-dev/terraform
+cd ~/apertium-gemini/terraform
 ./deploy_dictionaries.sh
 ```
 
@@ -50,7 +50,7 @@ cd ~/apertium-dev/terraform
 ## Instance Control
 
 ```bash
-cd ~/apertium-dev/terraform
+cd ~/apertium-gemini/terraform
 
 # Check status
 ./start_stop.sh status
@@ -68,7 +68,7 @@ cd ~/apertium-dev/terraform
 
 ```bash
 # 1. Run extractor (auto-starts instance)
-cd ~/apertium-dev/terraform
+cd ~/apertium-gemini/terraform
 ./run_extractor.sh
 
 # 2. Wait for completion (~1-2 hours)
@@ -108,13 +108,13 @@ tail -f ~/ido-esperanto-extractor/logs/*.log
 
 ### Disk full?
 ```bash
-cd ~/apertium-dev/projects/dev-scripts
+cd ~/apertium-gemini/projects/dev-scripts
 ./cleanup_ec2_extractor.sh
 ```
 
 ### Instance stuck?
 ```bash
-cd ~/apertium-dev/terraform
+cd ~/apertium-gemini/terraform
 ./start_stop.sh stop
 ./start_stop.sh start
 ```

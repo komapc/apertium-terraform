@@ -1,5 +1,12 @@
 # Cost Optimization Guide
 
+> **⚠️ Live production status (2026-09):** the running `apy-server` instance does **not**
+> currently have an Elastic IP attached, and Terraform state does not track that instance
+> (see `apertium-terraform#14`). Everything below describes the intended, EIP-attached
+> setup from `main.tf` — on the real box today, **`stop`/`start` will assign a new public
+> IP on start**, breaking the Cloudflare Worker until `wrangler.toml`/DNS is updated.
+> **Reboot only; do not stop/start the live instance** until an EIP is actually attached.
+
 ## Understanding AWS EC2 Billing
 
 ### Payment Model
@@ -198,7 +205,9 @@ Replace `<hours>` with your usage.
 ## Questions?
 
 - **Will stopping affect my data?** No, data persists on EBS.
-- **Will public IP change?** No, Elastic IP remains the same.
+- **Will public IP change?** Only if an Elastic IP is actually attached (per `main.tf`).
+  The current live instance has none, so today a stop/start **will** change the IP — see
+  the warning at the top of this doc.
 - **Can I automate this?** Yes, use AWS EventBridge scheduled rules.
 - **What about Cloudflare Worker?** Worker will fail gracefully when instance is stopped (just show error to users).
 

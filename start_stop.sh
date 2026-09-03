@@ -42,6 +42,10 @@ case "$1" in
         ;;
         
     stop)
+        echo -e "${RED}WARNING: the live prod instance has no Elastic IP attached.${NC}"
+        echo -e "${RED}Stopping and restarting it will assign a NEW public IP and break${NC}"
+        echo -e "${RED}the Cloudflare Worker until DNS/wrangler.toml is updated. Prefer a${NC}"
+        echo -e "${RED}reboot over stop/start on that box. See apertium-terraform#14.${NC}"
         echo -e "${YELLOW}Stopping instance ${INSTANCE_ID}...${NC}"
         aws ec2 stop-instances --instance-ids "$INSTANCE_ID"
         

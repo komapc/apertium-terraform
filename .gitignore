@@ -32,3 +32,5 @@ config.env
 # Terraform variables (may contain secrets)
 terraform.tfvars
 !terraform.tfvars.example
+
+*.tfplan

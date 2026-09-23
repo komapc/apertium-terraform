@@ -1,11 +1,11 @@
 # Terraform Configuration for Ido-Esperanto APy Server
 
-This Terraform configuration defines an AWS EC2 instance for hosting the Apertium APy
-translation server. **Note:** as of 2026-09, the live production instance was created
-out-of-band and is not tracked in this project's Terraform state — the tracked state
-currently manages only the S3 results bucket. Running `terraform apply` against `main.tf`
-as-is would attempt to create a *new*, separate instance rather than manage the existing
-one. See `apertium-terraform#14` before applying against prod.
+> **As of 2026-09 this configuration manages only the S3 extractor-results bucket (`s3.tf`).**
+> The live production APy server (i-056c20a3f393e9982, t3.micro, eu-west-1, **no EIP**) was
+> created out-of-band and is not in Terraform state. The old `aws_instance` / `aws_eip` /
+> security-group / key-pair / EventBridge definitions were removed (apertium-terraform#14) so
+> that `terraform apply` can no longer provision a duplicate server. The EC2 sections below are
+> historical. Never stop/start the prod box (its public IP would change) — reboot only.
 
 ## Prerequisites
 
